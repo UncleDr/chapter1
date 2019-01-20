@@ -52,7 +52,8 @@ public class Exercises1 extends AppCompatActivity {
         super.onDestroy();
         textView.append("onDestroy\n");
         Log.i(TAG,"onDestroy\n");
-        outState.putString(TAG,outState.get(TAG)+"onDestroy\n");
+        if(outState!=null)
+            outState.putString(TAG,outState.get(TAG)+"onDestroy\n");
     }
 
     @Override
@@ -60,7 +61,8 @@ public class Exercises1 extends AppCompatActivity {
         super.onStop();
         textView.append("onStop\n");
         Log.i(TAG,"onStop\n");
-        outState.putString(TAG,outState.get(TAG)+"onStop\n");
+        if(outState!=null)
+            outState.putString(TAG,outState.get(TAG)+"onStop\n");
     }
 
     @Override
